@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import SocialLogin from "../Components/SocialLogin";
 import Uses from "../hooks/Uses";
+import { useNavigate, useLocation } from "react-router-dom";
 
 
 const Login = () => {
@@ -13,16 +14,21 @@ const Login = () => {
         handleSubmit,
         formState: { errors },
       } = useForm()
+
+      // navigation system
+    const navigate = useNavigate()
+    const location = useLocation()
+    const from = location?.state || "/";
     
       const onSubmit = data => {
         const { email, password } = data
         signInUser(email, password)
             .then(result => {
-                console.log(result.user);
+               if(result.user){
+                navigate(from);
+               }
         })
-        .catch(error => {
-            console.log(error);
-        })
+        
         
     }; 
 
