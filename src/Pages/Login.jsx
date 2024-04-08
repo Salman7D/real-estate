@@ -1,12 +1,11 @@
-import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { AuthContext } from "../firebase/FirebasedProvider";
 import { useForm } from "react-hook-form";
 import SocialLogin from "../Components/SocialLogin";
+import Uses from "../hooks/Uses";
 
 
 const Login = () => {
-    const {signInUser} = useContext(AuthContext);
+    const {signInUser} = Uses();
 
 
     const {
@@ -53,9 +52,10 @@ const Login = () => {
         <div className="form-control mt-6">
           <button className="btn btn-primary">Login</button>
         </div>
-        <SocialLogin></SocialLogin>
+        
       </form>
-      <p className="text-center">New Here? <Link className="text-blue-600 font-bold" to="/register">
+      <SocialLogin></SocialLogin>
+      <p className="text-center lg:mt-6">New Here? <Link className="text-blue-600 font-bold" to="/register">
         Register
       </Link></p>
     </div>

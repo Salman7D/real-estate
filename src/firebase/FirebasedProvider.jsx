@@ -1,4 +1,4 @@
-import { GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import auth from "./firebase.confiq";
 
@@ -6,6 +6,7 @@ export const AuthContext = createContext(null);
 
 // social auth providers
 const googleProvider = new GoogleAuthProvider();
+const githubProvider = new GithubAuthProvider();
 
 const FirebasedProvider = ({children}) => {
 
@@ -27,6 +28,18 @@ console.log(user);
         return signInWithPopup(auth, googleProvider);
     }
 
+    // github login
+    const githubLogin =  () => {
+        return signInWithPopup(auth, githubProvider)
+    }
+
+    // logout user
+    const logOut = () => {
+        setUser(null)
+        signOut(auth)
+    }
+
+
 
     // observer
     useEffect(() => {
@@ -41,7 +54,10 @@ console.log(user);
     const allValues = {
         createUser,
         signInUser,
-        googleLogin
+        googleLogin,
+        githubLogin,
+        logOut,
+        user
     }
     return (
         <AuthContext.Provider value={allValues}>
