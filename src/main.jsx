@@ -1,10 +1,55 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
 import './index.css'
+
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import Root from './Components/Root/Root';
+import Home from './Components/Home/Home';
+import Login from './Pages/Login';
+import FirebasedProvider from './firebase/FirebasedProvider';
+import About from './Components/About/About';
+import ContactUS from './Components/Contact Us/ContactUS';
+import NotFound from './Components/NotFound';
+import Register from './Pages/Register';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Root></Root>,
+    errorElement: <NotFound></NotFound>,
+    children: [
+      {
+        path: "/",
+        element: <Home></Home>
+      },
+      {
+        path: "/login",
+        element: <Login></Login>
+      },
+      {
+        path: "/register",
+        element: <Register></Register>
+      },
+      {
+        path: "/about",
+        element: <About></About>
+      },
+      {
+        path: "/contactUs",
+        element: <ContactUS></ContactUS>
+      }
+    ]
+  },
+]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <FirebasedProvider>
+      <RouterProvider router={router} />
+    </FirebasedProvider>
+    
   </React.StrictMode>,
 )
