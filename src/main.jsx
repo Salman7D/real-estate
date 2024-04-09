@@ -14,6 +14,8 @@ import About from './Components/About/About';
 import ContactUS from './Components/Contact Us/ContactUS';
 import NotFound from './Components/NotFound';
 import Register from './Pages/Register';
+import Details from './Pages/Details';
+import PrivateRoute from './routes/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -23,7 +25,12 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home></Home>
+        element: <Home></Home>,
+        loader: () => fetch("/speciality.json")
+      },
+      {
+        path: "/lists/:id",
+        element: <PrivateRoute><Details></Details></PrivateRoute>
       },
       {
         path: "/login",

@@ -3,11 +3,13 @@ import { useForm } from "react-hook-form";
 import SocialLogin from "../Components/SocialLogin";
 import Uses from "../hooks/Uses";
 import { useNavigate, useLocation } from "react-router-dom";
+import { useState } from "react";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 
 const Login = () => {
     const {signInUser} = Uses();
-
+    const [showPassword, setShowPassword] = useState(false);
 
     const {
         register,
@@ -48,8 +50,17 @@ const Login = () => {
           <label className="label">
             <span className="label-text">Password</span>
           </label>
-          <input name="password" type="password" placeholder="password" className="input input-bordered" {...register("password", { required: true })} />
-          {errors.password && <span>This field is required</span>}
+          <div className="relative mb-4">
+            <input  name="password" 
+            type={ showPassword ? "text" : "password" } 
+            placeholder="password" className="input input-bordered w-full py-2 px-4" {...register("password", { required: true })} />
+            {errors.password && <span>This field is required</span>}
+            <span className="absolute top-4 right-2" onClick={() => setShowPassword(!showPassword)}>
+                {
+                    showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
+                }
+            </span>
+          </div>
 
           {/* <label className="label">
             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>

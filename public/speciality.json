@@ -1,0 +1,110 @@
+[
+    {
+      "id": "001",
+      "estate_title": "Modern Hospital Complex",
+      "segment_name": "Hospitals",
+      "description": "State-of-the-art hospital facility with advanced medical equipment and services.",
+      "price": "$10,000,000",
+      "status": "sale",
+      "area": "50,000 sq ft",
+      "location": "City Center",
+      "facilities": [
+        "Operating rooms",
+        "ICU facilities",
+        "Diagnostic imaging center",
+        "Pharmacy",
+        "Cafeteria"
+      ],
+      "image": "hospital_complex.jpg"
+    },
+    {
+      "id": "002",
+      "estate_title": "Elite School Campus",
+      "segment_name": "Schools",
+      "description": "Premium educational institution providing top-notch facilities for students' holistic development.",
+      "price": "$5,000,000",
+      "status": "sale",
+      "area": "30 acres",
+      "location": "Suburban Area",
+      "facilities": [
+        "Classrooms",
+        "Library",
+        "Science laboratories",
+        "Sports facilities",
+        "Cafeteria"
+      ],
+      "image": "school_campus.jpg"
+    },
+    {
+      "id": "003",
+      "estate_title": "Sacred Temple Complex",
+      "segment_name": "Religious Facilities",
+      "description": "A serene and spiritually uplifting temple complex with intricate architecture and serene ambiance.",
+      "price": "$2,500,000",
+      "status": "sale",
+      "area": "10 acres",
+      "location": "Countryside",
+      "facilities": [
+        "Main shrine",
+        "Prayer halls",
+        "Gardens",
+        "Community center"
+      ],
+      "image": "temple_complex.jpg"
+    },
+    {
+      "id": "004",
+      "estate_title": "Central Transportation Hub",
+      "segment_name": "Transportation Terminals",
+      "description": "Key transportation hub connecting various modes of transportation for seamless travel.",
+      "price": "$20,000,000",
+      "status": "sale",
+      "area": "100,000 sq ft",
+      "location": "Urban Center",
+      "facilities": [
+        "Bus terminals",
+        "Railway platforms",
+        "Taxi stands",
+        "Waiting lounges",
+        "Retail shops"
+      ],
+      "image": "transportation_hub.jpg"
+    },
+    {
+      "id": "005",
+      "estate_title": "Grand Convention Center",
+      "segment_name": "Convention Centers",
+      "description": "Magnificent convention center ideal for hosting large-scale events and conferences.",
+      "price": "$15,000,000",
+      "status": "sale",
+      "area": "70,000 sq ft",
+      "location": "Downtown",
+      "facilities": [
+        "Conference halls",
+        "Exhibition spaces",
+        "Banquet halls",
+        "Meeting rooms",
+        "Catering services"
+      ],
+      "image": "convention_center.jpg"
+    },
+    {
+      "id": "006",
+      "estate_title": "Contemporary Art Gallery",
+      "segment_name": "Art Galleries",
+      "description": "Chic art gallery showcasing contemporary artworks from renowned and emerging artists.",
+      "price": "$7,500,000",
+      "status": "sale",
+      "area": "15,000 sq ft",
+      "location": "Art District",
+      "facilities": [
+        "Gallery spaces",
+        "Art studios",
+        "Event space",
+        "Gift shop",
+        "Café"
+      ],
+      "image": "art_gallery.jpg"
+    }
+  ]
+  
