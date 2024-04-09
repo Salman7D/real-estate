@@ -67,8 +67,11 @@ const Register = () => {
           <div className="relative mb-4">
             <input  name="password" 
             type={ showPassword ? "text" : "password" } 
-            placeholder="password" className="input input-bordered w-full py-2 px-4" {...register("password", { required: true })} />
-            {errors.password && <span>This field is required</span>}
+            placeholder="password" className="input input-bordered w-full py-2 px-4" {...register("password", { required: true, pattern: {
+              value: /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/,
+              message: "Invalid password formate",
+            }, })} />
+            {errors.password?.message}
             <span className="absolute top-4 right-2" onClick={() => setShowPassword(!showPassword)}>
                 {
                     showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
