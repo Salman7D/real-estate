@@ -10,6 +10,11 @@ const Navbar = () => {
     <li><NavLink to="/">Home</NavLink></li>
     <li><NavLink to="/about">About</NavLink></li>
     <li><NavLink to="/contactUs">Contact US</NavLink></li>
+    {user && <>
+      <li><NavLink to="/userInformation">User Information</NavLink></li>
+    </>
+
+    }
     </>
     return (
         <div className="navbar bg-base-100">

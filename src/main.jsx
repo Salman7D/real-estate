@@ -16,6 +16,7 @@ import NotFound from './Components/NotFound';
 import Register from './Pages/Register';
 import Details from './Pages/Details';
 import PrivateRoute from './routes/PrivateRoute';
+import UserInformation from './Components/UserInformation/UserInformation';
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
       {
         path: "/contactUs",
         element: <ContactUS></ContactUS>
+      },
+      {
+        path: "/userInformation",
+        element: <PrivateRoute><UserInformation></UserInformation></PrivateRoute>
       }
     ]
   },
