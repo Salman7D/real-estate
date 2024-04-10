@@ -5,6 +5,8 @@ import Uses from "../hooks/Uses";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Login = () => {
@@ -27,9 +29,14 @@ const Login = () => {
         signInUser(email, password)
             .then(result => {
                if(result.user){
+                toast.success("Success");
                 navigate(from);
+                
                }
         })
+        .catch(error => {
+          toast.error("Login failed");
+      });
         
         
     }; 
@@ -75,6 +82,7 @@ const Login = () => {
       <p className="text-center lg:mt-6">New Here? <Link className="text-blue-600 font-bold" to="/register">
         Register
       </Link></p>
+      <ToastContainer></ToastContainer>
     </div>
   
     );

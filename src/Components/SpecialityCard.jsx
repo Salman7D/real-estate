@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const SpecialityCard = ({lists}) => {
     const {segment_name, estate_title, price, status, area, location, facilities, image, id} = lists;
     return (
-        <div>
+        <div data-aos="fade-left" data-aos-duration="1500">
             <div className="max-w-lg p-4 shadow-md dark:bg-gray-50 dark:text-gray-800">
                 <div className="flex justify-between pb-4 border-bottom">
                     <div className="flex items-center">
