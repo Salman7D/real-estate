@@ -11,7 +11,7 @@ const SpecialityCard = ({lists}) => {
                     <div className="flex items-center">
                         <a rel="noopener noreferrer" href="#" className="mb-0 capitalize dark:text-gray-800">{segment_name}</a>
                     </div>
-                    <Link className="btn btn-secondary" to={`/lists/${id}`}>View Properties</Link>
+                    <Link className="bg-purple-600 rounded-lg text-white text-lg font-semibold btn btn-ghost" to={`/lists/${id}`}>View Properties</Link>
                 </div>
                 <div className="space-y-4">
                     <img className="h-[30px] w-[30px]" src={image} alt="" />
