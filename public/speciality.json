@@ -15,7 +15,7 @@
         "Pharmacy",
         "Cafeteria"
       ],
-      "image": "hospital_complex.jpg"
+      "image": "https://ibb.co/hg9KzD3"
     },
     {
       "id": "002",
@@ -33,7 +33,7 @@
         "Sports facilities",
         "Cafeteria"
       ],
-      "image": "school_campus.jpg"
+      "image": "https://ibb.co/WH40y1P"
     },
     {
       "id": "003",
@@ -50,7 +50,7 @@
         "Gardens",
         "Community center"
       ],
-      "image": "temple_complex.jpg"
+      "image": "https://ibb.co/WH40y1P"
     },
     {
       "id": "004",
@@ -68,7 +68,7 @@
         "Waiting lounges",
         "Retail shops"
       ],
-      "image": "transportation_hub.jpg"
+      "image": "https://ibb.co/WH40y1P"
     },
     {
       "id": "005",
@@ -86,7 +86,7 @@
         "Meeting rooms",
         "Catering services"
       ],
-      "image": "convention_center.jpg"
+      "image": "https://ibb.co/WH40y1P"
     },
     {
       "id": "006",
@@ -104,7 +104,7 @@
         "Gift shop",
         "Café"
       ],
-      "image": "art_gallery.jpg"
+      "image": "https://ibb.co/WH40y1P"
     }
   ]
   

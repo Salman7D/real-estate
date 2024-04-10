@@ -1,5 +1,6 @@
 import Uses from "../hooks/Uses";
 import { Navigate, useLocation } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 
 const PrivateRoute = ({children}) => {
@@ -19,5 +20,9 @@ const PrivateRoute = ({children}) => {
         </div>
     );
 };
+
+PrivateRoute.propTypes = {
+    children:PropTypes.node
+}
 
 export default PrivateRoute;
