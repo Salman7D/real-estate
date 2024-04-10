@@ -2,22 +2,31 @@ import { Link, NavLink } from "react-router-dom";
 import Uses from "../../hooks/Uses";
 
 
+
 const Navbar = () => {
 
     const { logOut, user } = Uses();
 
     const navlinks = <>
-    <li><NavLink to="/">Home</NavLink></li>
-    <li><NavLink to="/about">About</NavLink></li>
-    <li><NavLink to="/contactUs">Contact US</NavLink></li>
+    <li><NavLink className={({isActive}) => 
+      isActive ? "border border-solid border-purple-500 rounded-lg text-purple-500" : "text-lg font-normal"
+    } to="/">Home</NavLink></li>
+    <li><NavLink className={({isActive}) => 
+      isActive ? "border border-solid border-purple-500 rounded-lg text-purple-500" : "text-lg font-normal"
+    } to="/about">About</NavLink></li>
+    <li><NavLink className={({isActive}) => 
+      isActive ? "border border-solid border-purple-500 rounded-lg text-purple-500" : "text-lg font-normal"
+    } to="/contactUs">Contact US</NavLink></li>
     {user && <>
-      <li><NavLink to="/userInformation">User Information</NavLink></li>
+      <li><NavLink className={({isActive}) => 
+      isActive ? "border border-solid border-purple-500 rounded-lg text-purple-500" : "text-lg font-normal"
+    } to="/userInformation">User Information</NavLink></li>
     </>
 
     }
     </>
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-100 lg:p-14">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -27,7 +36,7 @@ const Navbar = () => {
         {navlinks}
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">daisyUI</a>
+    <Link to="/" className="btn btn-ghost text-xl">daisyUI</Link>
   </div>
   
   <div className="navbar-center hidden lg:flex">
@@ -38,12 +47,21 @@ const Navbar = () => {
   
   <div className="navbar-end">
     {
-        user?.email ? 
-            <button onClick={logOut}>LogOut</button>
-            :
-            <Link to="/login">
-            <button className="btn btn-ghost">Login</button>
-        </Link>
+        user? 
+              <div className="flex justify-center lg:gap-5">
+                <div className="w-10 rounded-full">
+                  <div className="tooltip tooltip-bottom" data-tip={user?.displayName}>
+                    <img alt="" src={user?.photoURL || "https://i.ibb.co/hM5rH7g/batman-arkham-knight-mystery-door-1d-1920x1080.jpg"} />
+                  </div>  
+                </div>
+                <button className="bg-purple-600 rounded-lg text-white text-lg font-semibold btn btn-ghost" onClick={logOut}>LogOut</button>
+                </div>
+              
+              :
+              <Link to="/login">
+              <button className="bg-purple-600 rounded-lg text-white text-lg font-semibold btn btn-ghost">Login</button>
+              </Link>
+            
     }
         
   </div>

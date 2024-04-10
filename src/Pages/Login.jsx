@@ -72,12 +72,12 @@ const Login = () => {
           </label> */}
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Login</button>
+          <button className="bg-purple-600 rounded-lg text-white text-lg font-semibold btn btn-ghost">Login</button>
         </div>
         
       </form>
       <SocialLogin></SocialLogin>
-      <p className="text-center lg:mt-6">New Here? <Link className="text-blue-600 font-bold" to="/register">
+      <p className="text-center lg:mt-6 lg:mb-10">New Here? <Link className="text-purple-600 font-bold" to="/register">
         Register
       </Link></p>
       <ToastContainer></ToastContainer>

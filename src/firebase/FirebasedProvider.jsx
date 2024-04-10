@@ -21,6 +21,14 @@ console.log(loading);
         return  createUserWithEmailAndPassword(auth, email, password)
     }
 
+    // update user profile
+    const updateUserProfile = (name, image) => {
+        return updateUserProfile(auth.currentUser, {
+            displayName: name,
+            photoURL: image
+        })
+    }
+
     // sign in user
     const signInUser = (email, password) => {
         setLoading(true)
@@ -64,7 +72,8 @@ console.log(loading);
         githubLogin,
         logOut,
         user,
-        loading
+        loading,
+        updateUserProfile
     }
     return (
         <AuthContext.Provider value={allValues}>

@@ -1,17 +1,17 @@
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import Uses from "../hooks/Uses";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
 
 const Register = () => {
 
-    const { createUser } = Uses();
+    const { createUser, updateUserProfile } = Uses();
     const [showPassword, setShowPassword] = useState(false);
 
     const {
@@ -22,22 +22,26 @@ const Register = () => {
 
       // navigation system
     const navigate = useNavigate()
-    const location = useLocation()
-    const from = location?.state || "/";
+    
+    const from = "/";
     
       const onSubmit = data => {
-        const { email, password } = data
+        const { email, password, fullName, image } = data
+        
+        // create user update and profile
         createUser(email, password)
-            .then(result => {
-                if(result.user){
-                  toast.success("Success");
-                    navigate(from);
+            .then(() => {
+              navigate(from);
+              updateUserProfile(fullName, image)
+                .then(() => {
+                
+                  navigate(from);
                     
-                }
-        })
-        .catch(error => {
-          toast.error("Failed");
-        })
+                
+              });
+                
+        });
+        
         
     }; 
     
@@ -83,16 +87,16 @@ const Register = () => {
             
             <span className="absolute top-4 right-2" onClick={() => setShowPassword(!showPassword)}>
                 {
-                    showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
+                    showPassword ?  <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
                 }
             </span>
           </div>
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Register</button>
+        <button className="bg-purple-600 rounded-lg text-white text-lg font-semibold btn btn-ghost">Register</button>
         </div>
       </form>
-      <p className="text-center">Already Have an account? <Link className="text-blue-600 font-bold" to="/login">
+      <p className="text-center lg:mb-10">Already Have an account? <Link className="text-purple-600 font-bold" to="/login">
         Login
       </Link></p>
       <ToastContainer></ToastContainer>
