@@ -31,7 +31,8 @@ const router = createBrowserRouter([
       },
       {
         path: "/lists/:id",
-        element: <PrivateRoute><Details></Details></PrivateRoute>
+        element: <PrivateRoute><Details></Details></PrivateRoute>,
+        loader: () => fetch("/speciality.json")
       },
       {
         path: "/login",
