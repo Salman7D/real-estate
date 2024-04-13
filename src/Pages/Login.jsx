@@ -42,7 +42,7 @@ const Login = () => {
 
     return (
         <div>
-            <h2 className="text-3xl my-10 text-center">Please Login</h2>
+            <h2 className="text-3xl my-10 text-center text-[#687389]">Please Login</h2>
       <form onSubmit={handleSubmit(onSubmit)} className="card-body lg:w-1/2 md:w-3/4 mx-auto">
         <div className="form-control">
           <label className="label">
@@ -72,12 +72,12 @@ const Login = () => {
           </label> */}
         </div>
         <div className="form-control mt-6">
-          <button className="bg-purple-600 rounded-lg text-white text-lg font-semibold btn btn-ghost">Login</button>
+          <button className="bg-[#687389] rounded-lg text-white text-lg font-semibold btn btn-ghost">Login</button>
         </div>
         
       </form>
       <SocialLogin></SocialLogin>
-      <p className="text-center lg:mt-6 lg:mb-10">New Here? <Link className="text-purple-600 font-bold" to="/register">
+      <p className="text-center lg:mt-6 lg:mb-10">New Here? <Link className="text-[#687389]  font-bold" to="/register">
         Register
       </Link></p>
       <ToastContainer></ToastContainer>

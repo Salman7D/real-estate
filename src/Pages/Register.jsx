@@ -34,8 +34,8 @@ const Register = () => {
               navigate(from);
               updateUserProfile(fullName, image)
                 .then(() => {
-                
-                  navigate(from);
+
+                  // navigate(from);
                     
                 
               });
@@ -48,7 +48,7 @@ const Register = () => {
 
     return (
         <div>
-            <h2 className="text-3xl mt-10 text-center">Please Register</h2>
+            <h2 className="text-3xl mt-10 text-center text-[#687389]">Please Register</h2>
       <form onSubmit={handleSubmit(onSubmit)} className="card-body lg:w-1/2 md:w-3/4 mx-auto">
         <div className="form-control">
           <label className="label">
@@ -93,10 +93,10 @@ const Register = () => {
           </div>
         </div>
         <div className="form-control mt-6">
-        <button className="bg-purple-600 rounded-lg text-white text-lg font-semibold btn btn-ghost">Register</button>
+        <button className="bg-[#687389] rounded-lg text-white text-lg font-semibold btn btn-ghost">Register</button>
         </div>
       </form>
-      <p className="text-center lg:mb-10">Already Have an account? <Link className="text-purple-600 font-bold" to="/login">
+      <p className="text-center lg:mb-10">Already Have an account? <Link className="text-[#687389] font-bold" to="/login">
         Login
       </Link></p>
       <ToastContainer></ToastContainer>
