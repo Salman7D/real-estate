@@ -8,7 +8,7 @@ const UserInformation = () => {
     return (
         <div>
 
-            <div className="bg-[#F5F7FB] text-center lg:p-3">
+            <div className="bg-[#F5F7FB] text-center lg:p-3 lg:mb-10">
             <p className="font-medium">Name </p>
             <div className="bg-[#687389] lg:w-5 lg:h-1 lg:mb-3 lg:ml-[745px]">
 

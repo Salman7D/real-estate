@@ -39,7 +39,7 @@ const Navbar = () => {
         {navlinks}
       </ul>
     </div>
-    <Link to="/" className="btn btn-ghost text-xl">daisyUI</Link>
+    <Link to="/" className="btn btn-ghost text-xl">Skyline <span className="text-[#687389]">Residence</span> </Link>
   </div>
   
   <div className="navbar-center hidden lg:flex">

@@ -20,7 +20,7 @@ const Home = () => {
                 </div>
             </div>
             
-            <div className="lg:grid lg:grid-cols-2 lg:gap-10 lg:ml-40 lg:mt-10">
+            <div className="lg:grid lg:grid-cols-2 lg:gap-10 lg:ml-40 lg:mt-10 lg:mb-10">
                 {
                     lists.map(aList => <SpecialityCard key={aList.id} lists={aList}></SpecialityCard>)
                 }
