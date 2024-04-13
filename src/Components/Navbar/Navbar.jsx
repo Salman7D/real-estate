@@ -9,18 +9,21 @@ const Navbar = () => {
 
     const navlinks = <>
     <li><NavLink className={({isActive}) => 
-      isActive ? "border border-solid border-purple-500 rounded-lg text-purple-500" : "text-lg font-normal"
+      isActive ? "border border-solid border-[#687389] rounded-lg text-[#687389]" : "text-lg font-normal"
     } to="/">Home</NavLink></li>
     <li><NavLink className={({isActive}) => 
-      isActive ? "border border-solid border-purple-500 rounded-lg text-purple-500" : "text-lg font-normal"
+      isActive ? "border border-solid border-[#687389] rounded-lg text-[#687389]" : "text-lg font-normal"
     } to="/about">About</NavLink></li>
     <li><NavLink className={({isActive}) => 
-      isActive ? "border border-solid border-purple-500 rounded-lg text-purple-500" : "text-lg font-normal"
+      isActive ? "border border-solid border-[#687389] rounded-lg text-[#687389]" : "text-lg font-normal"
     } to="/contactUs">Contact US</NavLink></li>
     {user && <>
       <li><NavLink className={({isActive}) => 
-      isActive ? "border border-solid border-purple-500 rounded-lg text-purple-500" : "text-lg font-normal"
+      isActive ? "border border-solid border-[#687389] rounded-lg text-[#687389]" : "text-lg font-normal"
     } to="/userInformation">User Information</NavLink></li>
+      <li><NavLink className={({isActive}) => 
+      isActive ? "border border-solid border-[#687389] rounded-lg text-[#687389]" : "text-lg font-normal"
+    } to="/updateUserProfile">Update Profile</NavLink></li>
     </>
 
     }
@@ -54,12 +57,12 @@ const Navbar = () => {
                     <img alt="" src={user?.photoURL || "https://i.ibb.co/hM5rH7g/batman-arkham-knight-mystery-door-1d-1920x1080.jpg"} />
                   </div>  
                 </div>
-                <button className="bg-purple-600 rounded-lg text-white text-lg font-semibold btn btn-ghost" onClick={logOut}>LogOut</button>
+                <button className="bg-[#687389] rounded-lg text-white text-lg font-semibold btn btn-ghost" onClick={logOut}>LogOut</button>
                 </div>
               
               :
               <Link to="/login">
-              <button className="bg-purple-600 rounded-lg text-white text-lg font-semibold btn btn-ghost">Login</button>
+              <button className="border border-[#687389]  rounded-lg text-[#687389] text-lg font-semibold btn btn-ghost">Login</button>
               </Link>
             
     }
