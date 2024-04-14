@@ -4,7 +4,7 @@ import Uses from "../hooks/Uses";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { ToastContainer } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -32,9 +32,11 @@ const Register = () => {
         // create user update and profile
         createUser(email, password)
             .then(() => {
+              toast.success("Success");
               navigate(from);
               updateUserProfile(name, image)
                 .then(() => {
+                  
                     // setUser(user);
                   // navigate(from);
                     
@@ -96,11 +98,12 @@ const Register = () => {
         <div className="form-control mt-6">
         <button className="bg-[#687389] rounded-lg text-white text-lg font-semibold btn btn-ghost">Register</button>
         </div>
+        <ToastContainer></ToastContainer>
       </form>
       <p className="text-center lg:mb-10">Already Have an account? <Link className="text-[#687389] font-bold" to="/login">
         Login
       </Link></p>
-      <ToastContainer></ToastContainer>
+      
     </div>
     );
 };

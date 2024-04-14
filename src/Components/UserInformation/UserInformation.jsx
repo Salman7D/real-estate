@@ -1,10 +1,15 @@
+import { useNavigate } from "react-router-dom";
 import Uses from "../../hooks/Uses";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 const UserInformation = () => {
 
     const {  user, updateUserProfile } = Uses();
     console.log(user);
+    const navigate = useNavigate();
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -16,7 +21,8 @@ const UserInformation = () => {
 
         updateUserProfile(name, image)
         .then(() => {
-
+            toast.success("Success");
+            navigate("/userInformation")
         })
     }
 
@@ -77,6 +83,7 @@ const UserInformation = () => {
                   </form>
   </div>
 </div>
+<ToastContainer></ToastContainer>
 </div>
     );
 };
