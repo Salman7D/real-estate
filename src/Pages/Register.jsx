@@ -9,6 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 
+
 const Register = () => {
 
     const { createUser, updateUserProfile } = Uses();
@@ -21,20 +22,20 @@ const Register = () => {
       } = useForm()
 
       // navigation system
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     
     const from = "/";
     
       const onSubmit = data => {
-        const { email, password, fullName, image } = data
+        const { email, password, name, image } = data;
         
         // create user update and profile
         createUser(email, password)
             .then(() => {
               navigate(from);
-              updateUserProfile(fullName, image)
+              updateUserProfile(name, image)
                 .then(() => {
-
+                    // setUser(user);
                   // navigate(from);
                     
                 
@@ -61,7 +62,7 @@ const Register = () => {
           <label className="label">
             <span className="label-text">PhotoUrl</span>
           </label>
-          <input name="photourl" type="text" placeholder="PhotoURL" className="input input-bordered" {...register("image", { required: true })} />
+          <input name="image" type="text" placeholder="PhotoURL" className="input input-bordered" {...register("image", { required: true })} />
           {errors.image && <span>This field is required</span>}
         </div>
         <div className="form-control">

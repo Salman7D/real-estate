@@ -3,9 +3,26 @@ import Uses from "../../hooks/Uses";
 
 const UserInformation = () => {
 
-    const {  user } = Uses();
+    const {  user, updateUserProfile } = Uses();
     console.log(user);
+
+    const handleSubmit = e => {
+        e.preventDefault();
+
+        const name = e.target.name.value;
+        const image = e.target.image.value;
+
+        // console.log(name, img);
+
+        updateUserProfile(name, image)
+        .then(() => {
+
+        })
+    }
+
+
     return (
+        <div>
         <div>
 
             <div className="bg-[#F5F7FB] text-center lg:p-3 lg:mb-10">
@@ -35,6 +52,32 @@ const UserInformation = () => {
             
             
         </div>
+
+<div>
+        
+<div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+              <form onSubmit={handleSubmit} className="card-body">
+                  <div className="form-control">
+                      <label className="label">
+                          <span className="label-text">Full Name</span>
+                      </label>
+                      <input type="text" placeholder="Full name" className="input input-bordered" name='name' />
+                  </div>
+                  
+                  <div className="form-control">
+                      <label className="label">
+                          <span className="label-text">Image Url</span>
+                      </label>
+                      <input type="text" placeholder="image url" className="input input-bordered" name='image' />
+                  </div>
+                  
+                  <div className="form-control mt-6 p-0">
+                      <button className="btn btn-neutral" type='submit'>Register</button>
+                  </div>
+                  </form>
+  </div>
+</div>
+</div>
     );
 };
 
