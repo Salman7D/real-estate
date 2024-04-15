@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import Uses from "../../hooks/Uses";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Helmet } from "react-helmet";
 
 
 const UpdateUserProfile = () => {
@@ -28,6 +29,11 @@ const UpdateUserProfile = () => {
     
     return (
         <div>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>UpdateProfile - Skyline Residence</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
         <div>
         <div className="bg-[#d7deec] rounded-lg flex justify-center lg:mb-5 items-center lg:h-[50px]">
             <h2 className="text-2xl font-bold">User Information</h2>
@@ -52,7 +58,7 @@ const UpdateUserProfile = () => {
 
             <p className="font-bold lg:mb-5">{user.photoURL}</p>
             <div className="lg:ml-[715px] text-center">
-            <img className="lg:h-[100px] lg:w-[100px]" src={user.photoURL} alt="" />
+            <img className="lg:h-[100px] lg:w-[100px]" src={user?.photoURL || "https://i.ibb.co/LJftcB7/userIcon.png"} alt="" />
             </div>
             
             </div>

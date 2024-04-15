@@ -3,6 +3,7 @@ import Uses from "../../hooks/Uses";
 
 
 
+
 const Navbar = () => {
 
     const { logOut, user } = Uses();
@@ -51,7 +52,7 @@ const Navbar = () => {
               <div className="flex justify-center lg:gap-5">
                 <div className="w-10 rounded-full">
                   <div className="tooltip tooltip-bottom" data-tip={user?.displayName || "Not Found"}>
-                    <img alt="" src={user?.photoURL || "https://i.ibb.co/hM5rH7g/batman-arkham-knight-mystery-door-1d-1920x1080.jpg"} />
+                    <img alt="" src={user?.photoURL || "https://i.ibb.co/LJftcB7/userIcon.png"} />
                   </div>  
                 </div>
                 <button className="bg-[#687389] rounded-lg text-white text-lg font-semibold btn btn-ghost" onClick={logOut}>LogOut</button>

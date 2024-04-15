@@ -6,6 +6,7 @@ import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Helmet } from "react-helmet";
 
 
 
@@ -50,29 +51,34 @@ const Register = () => {
     
 
     return (
-        <div>
+        <div className="">
+          <Helmet>
+                <meta charSet="utf-8" />
+                <title>Register - Skyline Residence</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
             <h2 className="text-3xl mt-10 text-center text-[#687389]">Please Register</h2>
-      <form onSubmit={handleSubmit(onSubmit)} className="card-body lg:w-1/2 md:w-3/4 mx-auto">
+      <form onSubmit={handleSubmit(onSubmit)} className="border border-black card-body lg:w-1/2 md:w-3/4 mx-auto">
         <div className="form-control">
           <label className="label">
             <span className="label-text">Name</span>
           </label>
           <input name="name" type="text" placeholder="your name" className="input input-bordered" {...register("name", { required: true })} />
-          {errors.name && <span>This field is required</span>}
+          {errors.name && <span className="text-red-600">This field is required</span>}
         </div>
         <div className="form-control">
           <label className="label">
             <span className="label-text">PhotoUrl</span>
           </label>
-          <input name="image" type="text" placeholder="PhotoURL" className="input input-bordered" {...register("image", { required: true })} />
-          {errors.image && <span>This field is required</span>}
+          <input name="image" type="text" placeholder="PhotoURL" className="input input-bordered" {...register("image", {required: false})} />
+          {/* {errors.image && <span>This field is required</span>} */}
         </div>
         <div className="form-control">
           <label className="label">
             <span className="label-text">Email</span>
           </label>
           <input name="email" type="email" placeholder="email" className="input input-bordered" {...register("email", { required: true })} />
-          {errors.email && <span>This field is required</span>}
+          {errors.email && <span className="text-red-600">This field is required</span>}
         </div>
         <div className="form-control">
           <label className="label">
@@ -85,7 +91,7 @@ const Register = () => {
               value: /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/,
               message: "Must be an Uppercase, a Lowercase and Length must 6 characters",
             }, })} />
-            {errors.password && errors.password.message}
+            <span className="text-red-600">{errors.password && errors.password.message}</span>
             
             
             <span className="absolute top-4 right-2" onClick={() => setShowPassword(!showPassword)}>

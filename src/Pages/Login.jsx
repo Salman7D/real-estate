@@ -7,6 +7,7 @@ import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Helmet } from "react-helmet";
 
 
 const Login = () => {
@@ -42,6 +43,11 @@ const Login = () => {
 
     return (
         <div>
+          <Helmet>
+                <meta charSet="utf-8" />
+                <title>Login - Skyline Residence</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
             <h2 className="text-3xl my-10 text-center text-[#687389]">Please Login</h2>
       <form onSubmit={handleSubmit(onSubmit)} className="card-body lg:w-1/2 md:w-3/4 mx-auto">
         <div className="form-control">
