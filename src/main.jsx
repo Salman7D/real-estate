@@ -18,6 +18,7 @@ import Details from './Pages/Details';
 import PrivateRoute from './routes/PrivateRoute';
 import UserInformation from './Components/UserInformation/UserInformation';
 import UpdateUserProfile from './Components/UpdateUserProfile/UpdateUserProfile';
+import { ToastContainer } from 'react-toastify';
 
 const router = createBrowserRouter([
   {
@@ -67,6 +68,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <FirebasedProvider>
       <RouterProvider router={router} />
+      <ToastContainer></ToastContainer>
     </FirebasedProvider>
     
   </React.StrictMode>,

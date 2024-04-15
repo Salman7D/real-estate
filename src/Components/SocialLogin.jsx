@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 import Uses from "../hooks/Uses";
 import { useNavigate, useLocation } from "react-router-dom";
 
@@ -15,6 +16,7 @@ const SocialLogin = () => {
         socialprovider()
         .then(result => {
             if(result.user){
+                toast.success("Success");
                 navigate(from);
                 
             }

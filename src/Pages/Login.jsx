@@ -5,7 +5,7 @@ import Uses from "../hooks/Uses";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -80,7 +80,7 @@ const Login = () => {
       <p className="text-center lg:mt-6 lg:mb-10">New Here? <Link className="text-[#687389]  font-bold" to="/register">
         Register
       </Link></p>
-      <ToastContainer></ToastContainer>
+      
     </div>
   
     );

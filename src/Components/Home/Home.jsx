@@ -2,12 +2,21 @@
 import {useLoaderData} from "react-router-dom";
 import SpecialityCard from "../SpecialityCard";
 import Slider from "../Slider/Slider";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
     const lists = useLoaderData()
     console.log(lists);
     return (
+
         <div className="overflow-hidden">
+
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Home - Skyline Residence</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
+
             <Slider></Slider>
 
             <div className="ml-4 flex lg:gap-2 lg:mt-16">
