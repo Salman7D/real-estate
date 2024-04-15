@@ -35,6 +35,10 @@ const Login = () => {
                 
                }
         })
+            .catch(error => {
+              toast.error("Invalid Email or Password")
+              console.log(error.message);
+            })
         
         
         
@@ -48,14 +52,14 @@ const Login = () => {
                 <title>Login - Skyline Residence</title>
                 <link rel="canonical" href="http://mysite.com/example" />
             </Helmet>
-            <h2 className="text-3xl my-10 text-center text-[#687389]">Please Login</h2>
-      <form onSubmit={handleSubmit(onSubmit)} className="card-body lg:w-1/2 md:w-3/4 mx-auto">
+            <h2 className="text-3xl my-10 text-center text-[#687389] lg:mt-0 lg:mb-10">Please Login</h2>
+      <form onSubmit={handleSubmit(onSubmit)} className="card-body bg-[#ccd4e4] rounded-xl lg:w-1/2 md:w-3/4 mx-auto">
         <div className="form-control">
           <label className="label">
             <span className="label-text">Email</span>
           </label>
           <input name="email" type="email" placeholder="email" className="input input-bordered" {...register("email", { required: true })} />
-          {errors.email && <span>This field is required</span>}
+          {errors.email && <span className="text-red-600">This field is required</span>}
         </div>
         <div className="form-control">
           <label className="label">
@@ -65,7 +69,7 @@ const Login = () => {
             <input  name="password" 
             type={ showPassword ? "text" : "password" } 
             placeholder="password" className="input input-bordered w-full py-2 px-4" {...register("password", { required: true })} />
-            {errors.password && <span>This field is required</span>}
+            {errors.password && <span className="text-red-600">This field is required</span>}
             <span className="absolute top-4 right-2" onClick={() => setShowPassword(!showPassword)}>
                 {
                     showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
@@ -83,7 +87,7 @@ const Login = () => {
         
       </form>
       <SocialLogin></SocialLogin>
-      <p className="text-center lg:mt-6 lg:mb-10">New Here? <Link className="text-[#687389]  font-bold" to="/register">
+      <p className="text-center lg:mt-10 lg:mb-10 font-bold">New Here? <Link className="text-[#687389]  font-bold" to="/register">
         Register
       </Link></p>
       
