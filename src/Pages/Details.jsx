@@ -23,9 +23,9 @@ const Details = () => {
               <div className=" lg:w-[900px] lg:ml-[200px]">
             <div className="flex justify-between">
                 <div className="lg:p-3">
-                    <p className="text-lg font-semibold">#{card.segment_name}</p>
-                <h2 className="text-3xl font-bold">{card.estate_title}</h2>
-                <p className="text-lg font-medium flex lg:gap-2"><ImLocation2 className="lg:h-[24px] lg:w-[24px]"></ImLocation2>{card.location}</p>
+                    <p className="text-lg font-semibold lg:mb-3"># <span className="text-[#687389]">{card.segment_name}</span></p>
+                <h2 className="text-3xl font-bold lg:mb-2">{card.estate_title}</h2>
+                <p className="text-lg font-medium flex lg:gap-2 lg:mb-3"><ImLocation2 className="lg:h-[24px] lg:w-[24px]"></ImLocation2>{card.location}</p>
                 </div>
                 <div>
                 <p className="lg:p-3 text-[#687389] text-lg font-semibold">{card.price}</p>

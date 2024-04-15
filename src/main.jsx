@@ -16,7 +16,7 @@ import NotFound from './Components/NotFound';
 import Register from './Pages/Register';
 import Details from './Pages/Details';
 import PrivateRoute from './routes/PrivateRoute';
-import UserInformation from './Components/UserInformation/UserInformation';
+
 import UpdateUserProfile from './Components/UpdateUserProfile/UpdateUserProfile';
 import { ToastContainer } from 'react-toastify';
 
@@ -53,11 +53,7 @@ const router = createBrowserRouter([
         element: <ContactUS></ContactUS>
       },
       {
-        path: "/userInformation",
-        element: <PrivateRoute><UserInformation></UserInformation></PrivateRoute>
-      },
-      {
-        path: "/updateUserProfile",
+        path: "/updateProfile",
         element : <PrivateRoute><UpdateUserProfile></UpdateUserProfile></PrivateRoute>
       }
     ]

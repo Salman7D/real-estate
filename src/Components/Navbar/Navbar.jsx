@@ -20,10 +20,7 @@ const Navbar = () => {
     {user && <>
       <li><NavLink className={({isActive}) => 
       isActive ? "border border-solid border-[#687389] rounded-lg text-[#687389]" : "text-lg font-normal"
-    } to="/userInformation">User Information</NavLink></li>
-      <li><NavLink className={({isActive}) => 
-      isActive ? "border border-solid border-[#687389] rounded-lg text-[#687389]" : "text-lg font-normal"
-    } to="/updateUserProfile">Update Profile</NavLink></li>
+    } to="/updateProfile">Update Profile</NavLink></li>
     </>
 
     }
