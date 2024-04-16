@@ -7,14 +7,14 @@ const Footer = () => {
             <footer className="footer p-10  bg-[#232733]">
   <nav>
     <h6 className="footer-title text-white">## Skyline Residence</h6> 
-    <p className=" lg:w-72 text-white lg:mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum incidunt architecto soluta laboriosam, perspiciatis, aspernatur officiis esse.</p>
+    <p className=" lg:w-72 text-white lg:mb-5 mb-5">At Skyline Residence, we pride ourselves on offering unparalleled luxury living with breathtaking views of the cityscape. Our website serves as a virtual gateway, inviting you to explore the sophistication and elegance that define our residence.</p>
     <a className="link link-hover text-white">95 South Park Avenue, USA</a>
     <a className="link link-hover text-white">+456 875 369 208</a>
     <a className="link link-hover text-white">support@skylineresidence.com</a>
   </nav> 
   <nav>
     <h6 className="footer-title text-white">Navigation</h6> 
-    <div className="flex justify-center lg:gap-5">
+    <div className="flex justify-center lg:gap-5 gap-5">
         <div>
         <p className="link link-hover lg:mb-2 text-white">Home One</p>
         <p className="link link-hover lg:mb-2 text-white">Properties Right</p>
@@ -54,7 +54,7 @@ const Footer = () => {
     <h2 className="lg:w-72 text-white">Sign Up for Our Newsletter to get Latest Updates and Offers. Subscribe to receive news in your inbox.</h2>
     <fieldset className="form-control w-80">
       <label className="label">
-        <span className="label-text text-white lg:mt-5">Enter your email address</span>
+        <span className="label-text text-white lg:mt-5 mt-5">Enter your email address</span>
       </label> 
       <div className="join">
         <input type="email" placeholder="username@site.com" className="input input-bordered join-item" /> 

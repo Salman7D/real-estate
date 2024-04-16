@@ -9,8 +9,8 @@ const SpecialityCard = ({lists}) => {
     return (
         
 <div data-aos="fade-left" data-aos-duration="1500">
-<div className="card w-96 bg-[#dbdee2] shadow-xl lg:ml-10">
-    <figure><img className="lg:h-[200px] lg:w-[320px] rounded-xl lg:mt-5" src={image} alt="" /></figure>
+<div className="card w-96 bg-[#dbdee2] shadow-xl ml-5 mb-10 lg:ml-10">
+    <figure><img className="lg:h-[200px] lg:w-[320px] mt-5 h-[200px] w-[320px] rounded-xl lg:mt-5" src={image} alt="" /></figure>
     
     <div className="card-body">
         <h1><span className="font-bold"># </span>{segment_name}</h1>

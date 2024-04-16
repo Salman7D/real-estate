@@ -19,7 +19,7 @@ const Home = () => {
 
             <Slider></Slider>
 
-            <div className="ml-4 flex lg:gap-2 lg:mt-16 lg:ml-28">
+            <div className="lg:mb-0 mb-10 ml-4 mt-10 flex lg:gap-2 gap-2 lg:mt-16 lg:ml-28">
                 <div className="bg-[#687389] w-4 h-14">
 
                 </div>
