@@ -33,7 +33,7 @@ const Details = () => {
             </div>
  
                 <div>
-                    <img className="lg:h-[500px] lg:w-[900px] lg:ml-0 ml-3 w-[400px] h-[200px] rounded-xl" src={card.image} alt="" />
+                    <img className="lg:h-[500px] lg:w-[900px] md:w-[745px] md:h-[400px] lg:ml-0 ml-3 w-[400px] h-[200px] rounded-xl" src={card.image} alt="" />
                 </div>
 
             <div className="bg-[#F5F7FB] rounded-xl lg:mt-10 mt-5 p-3 lg:p-3">

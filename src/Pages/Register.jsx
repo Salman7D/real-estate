@@ -61,7 +61,7 @@ const Register = () => {
                 <title>Register - Skyline Residence</title>
                 <link rel="canonical" href="http://mysite.com/example" />
             </Helmet>
-            <h2 className="text-3xl lg:mb-10 text-center text-[#687389]">Please Register</h2>
+            <h2 className="text-3xl lg:mb-10 lg:mt-0 mt-10 mb-10 text-center text-[#687389]">Please Register</h2>
       <form onSubmit={handleSubmit(onSubmit)} className="bg-[#ccd4e4] rounded-xl card-body lg:w-1/2 md:w-3/4 mx-auto">
         <div className="form-control">
           <label className="label">
@@ -110,7 +110,7 @@ const Register = () => {
         </div>
         
       </form>
-      <p className="text-center lg:mb-10 lg:mt-10 font-bold">Already Have an account? <Link className="text-[#687389] font-bold" to="/login">
+      <p className="text-center lg:mb-10 mb-10 lg:mt-10 mt-10 font-bold">Already Have an account? <Link className="text-[#687389] font-bold" to="/login">
         Login
       </Link></p>
       

@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 const Footer = () => {
     return (
         <div>
-            <footer className="footer p-10  bg-[#232733]">
+            <footer className="footer p-10 md:overflow-hidden bg-[#232733]">
   <nav>
     <h6 className="footer-title text-white">## Skyline Residence</h6> 
-    <p className=" lg:w-72 text-white lg:mb-5 mb-5">At Skyline Residence, we pride ourselves on offering unparalleled luxury living with breathtaking views of the cityscape. Our website serves as a virtual gateway, inviting you to explore the sophistication and elegance that define our residence.</p>
+    <p className=" lg:w-72 text-white lg:mb-5 mb-5 md:mb-12">At Skyline Residence, we pride ourselves on offering unparalleled luxury living with breathtaking views of the cityscape. Our website serves as a virtual gateway, inviting you to explore the sophistication and elegance that define our residence.</p>
     <a className="link link-hover text-white">95 South Park Avenue, USA</a>
     <a className="link link-hover text-white">+456 875 369 208</a>
     <a className="link link-hover text-white">support@skylineresidence.com</a>
@@ -16,24 +16,24 @@ const Footer = () => {
     <h6 className="footer-title text-white">Navigation</h6> 
     <div className="flex justify-center lg:gap-5 gap-5">
         <div>
-        <p className="link link-hover lg:mb-2 text-white">Home One</p>
-        <p className="link link-hover lg:mb-2 text-white">Properties Right</p>
-        <p className="link link-hover lg:mb-2 text-white">Properties List</p>
-        <p className="link link-hover lg:mb-2 text-white">Properties Details</p>
-        <p className="link link-hover lg:mb-2 text-white">Agents Listing</p>
+        <p className="link link-hover lg:mb-2 md:mb-2 text-white">Home One</p>
+        <p className="link link-hover lg:mb-2 md:mb-2 text-white">Properties Right</p>
+        <p className="link link-hover lg:mb-2 md:mb-2 text-white">Properties List</p>
+        <p className="link link-hover lg:mb-2 md:mb-2 text-white">Properties Details</p>
+        <p className="link link-hover lg:mb-2 md:mb-2 text-white">Agents Listing</p>
     
         </div>
 
         <div>
-        <p className="link link-hover lg:mb-2 text-white">Agents Details</p>
+        <p className="link link-hover lg:mb-2 md:mb-2 text-white">Agents Details</p>
         <Link to="/about">
-        <p className="link link-hover lg:mb-2 text-white">About Us</p> 
+        <p className="link link-hover lg:mb-2 md:mb-2 text-white">About Us</p> 
         </Link>     
     
-        <p className="link link-hover lg:mb-2 text-white">Blog Default</p>
-    <p className="link link-hover lg:mb-2 text-white">Blog Details</p> 
+        <p className="link link-hover lg:mb-2 md:mb-2 text-white">Blog Default</p>
+    <p className="link link-hover lg:mb-2 md:mb-2 text-white">Blog Details</p> 
     <Link to="/contactUs">
-    <p className="link link-hover lg:mb-2 text-white">Contact Us</p>
+    <p className="link link-hover lg:mb-2 md:mb-2 text-white">Contact Us</p>
     </Link>
         
      
@@ -51,18 +51,20 @@ const Footer = () => {
   <nav>
   <form>
     <h6 className="footer-title text-white">Newsletter</h6> 
-    <h2 className="lg:w-72 text-white">Sign Up for Our Newsletter to get Latest Updates and Offers. Subscribe to receive news in your inbox.</h2>
+    <h2 className="lg:w-72 md:w-60 text-white">Sign Up for Our Newsletter to get Latest Updates and Offers. Subscribe to receive news in your inbox.</h2>
     <fieldset className="form-control w-80">
       <label className="label">
         <span className="label-text text-white lg:mt-5 mt-5">Enter your email address</span>
       </label> 
-      <div className="join">
-        <input type="email" placeholder="username@site.com" className="input input-bordered join-item" /> 
+      <div className="join md:overflow-x-auto">
+        <input type="email" placeholder="mail@site.com" className="input input-bordered join-item md:w-40 lg:w-60" /> 
         <button className="bg-[#687389] text-white btn btn-ghost join-item">Subscribe</button>
       </div>
     </fieldset>
   </form>
+  
   </nav>
+  
 </footer> 
 <footer className="footer px-10 py-4 border-t bg-[#232733] text-base-content border-base-300">
   <aside className="items-center grid-flow-col">

@@ -87,7 +87,7 @@ const Login = () => {
         
       </form>
       <SocialLogin></SocialLogin>
-      <p className="text-center lg:mt-10 lg:mb-10 font-bold">New Here? <Link className="text-[#687389]  font-bold" to="/register">
+      <p className="text-center lg:mt-10 mt-10 lg:mb-10 mb-10 font-bold">New Here? <Link className="text-[#687389]  font-bold" to="/register">
         Register
       </Link></p>
       

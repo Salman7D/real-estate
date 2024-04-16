@@ -49,10 +49,10 @@ const Navbar = () => {
   <div className="navbar-end">
     {
         user? 
-              <div className="flex justify-center lg:gap-5">
+              <div className="flex justify-center lg:gap-5 gap-1">
                 <div className="w-10 rounded-full">
                   <div className="tooltip tooltip-bottom" data-tip={user?.displayName || "Not Found"}>
-                    <img alt="" src={user?.photoURL || "https://i.ibb.co/LJftcB7/userIcon.png"} />
+                    <img className="rounded-full" alt="" src={user?.photoURL || "https://i.ibb.co/LJftcB7/userIcon.png"} />
                   </div>  
                 </div>
                 <button className="bg-[#687389] rounded-lg text-white text-lg font-semibold btn btn-ghost" onClick={logOut}>LogOut</button>

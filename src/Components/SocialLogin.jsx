@@ -24,10 +24,10 @@ const SocialLogin = () => {
     }
     return (
         <>
-            <div className="divider lg:w-1/2 lg:ml-[400px] font-bold">
+            <div className="divider lg:w-1/2 lg:ml-[400px] mt-10 mb-10 font-bold">
                 Continue with
             </div>
-            <div className="flex justify-center lg:gap-32">
+            <div className="flex justify-center lg:gap-16 gap-5 lg:mb-0 mb-5">
             <button onClick={() => handleSocialLogin(googleLogin)} className="btn btn-ghost border-primary text-primary">Google</button>
             <button onClick={() => handleSocialLogin(githubLogin)} className="btn btn-ghost border-secondary text-secondary">Github</button>
             </div>
