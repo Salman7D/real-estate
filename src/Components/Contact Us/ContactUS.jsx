@@ -1,4 +1,8 @@
 import { Helmet } from "react-helmet";
+import { ImLocation } from "react-icons/im";
+import { IoCall } from "react-icons/io5";
+import { MdEmail } from "react-icons/md";
+import { FaClock } from "react-icons/fa6";
 
 
 const ContactUS = () => {
@@ -56,16 +60,16 @@ const ContactUS = () => {
             </div>
 
             <div>
-                <div data-aos="fade-right" data-aos-duration="1500" className="bg-[#dce2ed] rounded-xl p-5 lg:p-5">
+                <div data-aos="fade-right" data-aos-duration="1500" className="bg-[#dce2ed] rounded-xl p-5 lg:p-5 mb-5 md:mb-5">
                     <h2 className="text-xl font-bold lg:mb-2">Contact Details</h2>
-                    <div className="bg-[#aeb9cf] lg:w-16 lg:h-1 lg:mb-5">
+                    <div className="bg-[#aeb9cf] lg:w-16 lg:h-1 lg:mb-5 mb-3">
                         
                     </div>
-                    <p className="font-medium">Please find below contact details and contact us today!</p>
-                    <p className="font-medium">95 South Park Ave, USA</p>
-                    <p className="font-medium">+456 875 369 208</p>
-                    <p className="font-medium">support@findhouses.com</p>
-                    <p className="font-medium">8:00 a.m - 9:00 p.m</p>
+                    <p className="font-medium lg:mb-3 mb-3">Please find below contact details and contact us today!</p>
+                    <p className="font-medium lg:mb-3 mb-3 link link-hover flex lg:gap-1 gap-1"><ImLocation></ImLocation> 95 South Park Ave, USA</p>
+                    <p className="font-medium lg:mb-3 mb-3 link link-hover flex lg:gap-1 gap-1"><IoCall></IoCall> +456 875 369 208</p>
+                    <p className="font-medium lg:mb-3 mb-3 link link-hover flex lg:gap-1 gap-1"><MdEmail></MdEmail> support@findhouses.com</p>
+                    <p className="font-medium flex lg:gap-1 gap-1"><FaClock></FaClock> 8:00 a.m - 9:00 p.m</p>
                 </div>
             </div>
             

@@ -12,7 +12,7 @@ const Agency = () => {
                 <title>Agency Lists - Skyline Residence</title>
                 <link rel="canonical" href="http://mysite.com/example" />
             </Helmet>
-            <div className="bg-[#aeb7c8] rounded-lg text-center lg:p-1 lg:mb-10">
+            <div className="bg-[#aeb7c8] rounded-lg text-center lg:mt-0 mt-10 lg:p-1 lg:mb-10">
                 <h1 className="text-2xl font-black">Meet Our Agency</h1>
             </div>
             <div className="lg:grid lg:grid-cols-2  lg:mb-10">

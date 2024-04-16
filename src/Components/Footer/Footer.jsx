@@ -1,4 +1,8 @@
 import { Link } from "react-router-dom";
+import { ImLocation } from "react-icons/im";
+import { IoCall } from "react-icons/io5";
+import { MdEmail } from "react-icons/md";
+
 
 
 const Footer = () => {
@@ -8,9 +12,9 @@ const Footer = () => {
   <nav>
     <h6 className="footer-title text-white">## Skyline Residence</h6> 
     <p className=" lg:w-72 text-white lg:mb-5 mb-5 md:mb-12">At Skyline Residence, we pride ourselves on offering unparalleled luxury living with breathtaking views of the cityscape. Our website serves as a virtual gateway, inviting you to explore the sophistication and elegance that define our residence.</p>
-    <a className="link link-hover text-white">95 South Park Avenue, USA</a>
-    <a className="link link-hover text-white">+456 875 369 208</a>
-    <a className="link link-hover text-white">support@skylineresidence.com</a>
+    <a className="link link-hover text-white flex lg:gap-1 gap-1"><ImLocation></ImLocation> 95 South Park Avenue, USA</a>
+    <a className="link link-hover text-white flex lg:gap-1 gap-1"><IoCall></IoCall> +456 875 369 208</a>
+    <a className="link link-hover text-white flex lg:gap-1 gap-1"><MdEmail></MdEmail> support@skylineresidence.com</a>
   </nav> 
   <nav>
     <h6 className="footer-title text-white">Navigation</h6> 
