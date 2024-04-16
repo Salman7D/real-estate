@@ -70,7 +70,7 @@ const UpdateUserProfile = () => {
         <div className="bg-[#d7deec] rounded-lg lg:mb-5 mb-5 flex justify-center items-center lg:h-[50px] h-[40px]">
             <h2 className="text-2xl font-bold">Update or Edit Profile</h2>
         </div>
-<div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-[#ccd4e4] lg:mb-10 lg:ml-[560px] md:ml-48 ml-5 mb-10">
+<div data-aos="zoom-down" data-aos-duration="1500" className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-[#ccd4e4] lg:mb-10 lg:ml-[560px] md:ml-48 ml-5 mb-10">
               <form onSubmit={handleSubmit} className="card-body">
                   <div className="form-control">
                       <label className="label">
