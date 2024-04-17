@@ -16,7 +16,7 @@ const SocialLogin = () => {
         socialprovider()
         .then(result => {
             if(result.user){
-                toast.success("Success");
+                toast.success("Successfully Login");
                 navigate(from);
                 
             }

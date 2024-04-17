@@ -30,7 +30,7 @@ const Login = () => {
         signInUser(email, password)
             .then(result => {
                if(result.user){
-                toast.success("Success");
+                toast.success("Successfully Login");
                 navigate(from);
                 
                }

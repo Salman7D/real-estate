@@ -21,7 +21,7 @@ const UpdateUserProfile = () => {
 
         updateUserProfile(name, image)
         .then(() => {
-            toast.success("Success");
+            toast.success("Successfully updated profile");
             navigate("/updateProfile")
         })
     }

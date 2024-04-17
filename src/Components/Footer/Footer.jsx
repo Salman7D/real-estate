@@ -61,7 +61,7 @@ const Footer = () => {
         <span className="label-text text-white lg:mt-5 mt-5">Enter your email address</span>
       </label> 
       <div className="join md:overflow-x-auto">
-        <input type="email" placeholder="mail@site.com" className="input input-bordered join-item md:w-40 lg:w-60" /> 
+        <input type="email" placeholder="mail@site.com" className="input input-bordered join-item md:w-32 lg:w-60" /> 
         <button className="bg-[#687389] text-white btn btn-ghost join-item">Subscribe</button>
       </div>
     </fieldset>

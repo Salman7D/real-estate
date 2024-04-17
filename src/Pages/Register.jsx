@@ -33,7 +33,7 @@ const Register = () => {
         // create user update and profile
         createUser(email, password)
             .then(() => {
-              toast.success("Success");
+              toast.success("Successfully create an account");
               navigate(from);
               updateUserProfile(name, image)
                 .then(() => {
